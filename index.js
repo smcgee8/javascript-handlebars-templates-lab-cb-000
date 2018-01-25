@@ -22,7 +22,7 @@ function loadRecipeForm() {
 }
 
 function createRecipe() {
-
+  var name = document.getElementByName("name")
 }
 
 function displayEditForm() {
