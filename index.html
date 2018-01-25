@@ -24,7 +24,7 @@
         Description: <input type="text" name="description" value="{{description}}"><br>
         <h3>Ingredients</h3>
         {{#each ingredients}}
-          <input type="text" name="ingredients" value="{{name}}">
+          <input type="text" name="ingredients" value="{{this}}">
         {{/each}}
         <input type="submit">
       </form>
