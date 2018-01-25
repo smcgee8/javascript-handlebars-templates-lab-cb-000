@@ -19,7 +19,7 @@
     <script>mocha.setup('bdd');</script>
     <script src="test/index-test.js"></script>
     <script id="recipe-form-template" type="text/x-handlebars-template">
-      <form onSubmit="createRecipe(); return false">
+      <form onSubmit="{{onsubmit}}; return false">
         Name: <input type="text" name="name"><br>
         Description: <input type="text" name="description"><br>
         <h3>Ingredients</h3>
