@@ -45,7 +45,7 @@ function createRecipe() {
 }
 
 function displayEditForm() {
-  console.log("what");
+  console.log(name);
 //Run this when edit recipe is clicked
 //Render recipe-form-template with updateRecipe as the submit function
 //Make sure the existing data shows up if it's in edit mode
