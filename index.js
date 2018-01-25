@@ -28,7 +28,7 @@ function createRecipe() {
   event.preventDefault();
   var name = document.getElementsByName("name")[0].value;
   var description = document.getElementsByName("description")[0].value;
-  var ingredients = document.getElementsByName("ingredients");
+  var ingredients = document.getElementsByClass("ingredients");
 
   var recipeContents = {
     name: name,
