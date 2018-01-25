@@ -2,7 +2,7 @@ function init() {
   //put any page initialization/handlebars initialization here
   Handlebars.registerPartial('recipeDetailsPartial', document.getElementById("recipe-details-template").innerHTML);
   Handlebars.registerHelper('displayIngredient', function() {
-    return new Handlebars.SafeString('<li id="ingredient">' + this + "</li>");
+    return new Handlebars.SafeString('<li class="ingredient">' + this + "</li>");
   });
   loadRecipeForm();
 
