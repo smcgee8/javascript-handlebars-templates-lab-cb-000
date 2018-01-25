@@ -45,10 +45,24 @@ function createRecipe() {
 }
 
 function displayEditForm() {
-  console.log(name);
-//Run this when edit recipe is clicked
-//Render recipe-form-template with updateRecipe as the submit function
-//Make sure the existing data shows up if it's in edit mode
+  var name = document.getElementById("name").value;
+  var description = document.getElementById("description").value;
+
+  var newFormContents = {
+    onsubmit: "updateRecipe()",
+    name: name,
+    description: description,
+    ingredients: [
+      {name: ""},
+      {name: ""},
+      {name: ""},
+      {name: ""},
+      {name: ""}
+    ]
+  };
+
+  var recipeFormTemplate = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
+  document.getElementsByTagName("main")[0].innerHTML = recipeFormTemplate(newFormContents)
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
