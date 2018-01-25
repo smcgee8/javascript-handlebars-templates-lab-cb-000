@@ -28,7 +28,7 @@ function createRecipe() {
   event.preventDefault();
   var name = document.getElementsByName("name")[0].value;
   var description = document.getElementsByName("description")[0].value;
-  var ingredients = document.getElementsByClassName("ingredients");
+  var ingredients = document.getElementsByName("ingredients");
 
   var recipeContents = {
     name: name,
@@ -47,7 +47,7 @@ function createRecipe() {
 function displayEditForm() {
   var name = document.getElementById("name").innerHTML;
   var description = document.getElementById("description").innerHTML;
-  var ingredients = document.getElementsById("ingredients");
+  var ingredients = document.getElementsByClassName("ingredients");
 
   var editFormContents = {
     onsubmit: "updateRecipe()",
