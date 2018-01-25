@@ -36,7 +36,6 @@ function createRecipe() {
   for (let i = 0; i < ingredients.length; i++) {
     recipeContents.ingredients.push(ingredients[i].value);
   }
-  console.log(ingredients[0].value);
 
   var displayRecipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
   document.getElementsByTagName("main")[0].innerHTML = displayRecipeTemplate(recipeContents);
