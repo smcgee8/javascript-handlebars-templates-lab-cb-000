@@ -48,7 +48,7 @@ function displayEditForm() {
   var name = document.getElementById("name").value;
   var description = document.getElementById("description").value;
 
-  var newFormContents = {
+  var editFormContents = {
     onsubmit: "updateRecipe()",
     name: name,
     description: description,
@@ -62,7 +62,7 @@ function displayEditForm() {
   };
 
   var recipeFormTemplate = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
-  document.getElementsByTagName("main")[0].innerHTML = recipeFormTemplate(newFormContents)
+  document.getElementsByTagName("main")[0].innerHTML = recipeFormTemplate(editFormContents)
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
