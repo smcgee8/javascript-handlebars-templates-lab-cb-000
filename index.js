@@ -3,7 +3,7 @@ function init() {
   Handlebars.registerPartial('recipeDetailsPartial', document.getElementById("recipe-details-template").innerHTML);
   Handlebars.registerHelper('dispalyIngredient', function() {
     Handlebars.SafeString("<li>" + this + "</li>");
-  })
+  });
   loadRecipeForm();
 
 
