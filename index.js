@@ -1,5 +1,12 @@
 function init() {
   //put any page initialization/handlebars initialization here
+
+  loadRecipeForm();
+
+
+}
+
+function loadRecipeForm() {
   var blank_ingredients = {
     ingredients: [
       {name: ""},
@@ -11,7 +18,6 @@ function init() {
   };
   var recipeFormTemplate = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
   document.getElementsByTagName("main")[0].innerHTML += recipeFormTemplate(blank_ingredients)
-  //need to register a few partials and things? 
 }
 
 function createRecipe() {
