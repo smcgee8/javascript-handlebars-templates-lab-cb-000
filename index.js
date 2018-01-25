@@ -22,6 +22,7 @@ function loadRecipeForm() {
 }
 
 function createRecipe() {
+  event.preventDefault();
   var name = document.getElementsByName("name")[0];
   var description = document.getElementsByName("description")[0];
   var ingredients = document.getElementsByName("ingredients");
