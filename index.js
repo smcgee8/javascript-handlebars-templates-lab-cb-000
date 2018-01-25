@@ -57,7 +57,7 @@ function displayEditForm() {
   };
 
   for (let i = 0; i < ingredients.length; i++) {
-    editFormContents.ingredients.push(ingredients[i].innerHTML);
+    editFormContents.ingredients.push({name: ingredients[i].innerHTML});
   }
 
   var recipeFormTemplate = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
