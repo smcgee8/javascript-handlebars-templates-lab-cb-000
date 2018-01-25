@@ -10,7 +10,7 @@ function loadRecipeForm() {
   var newFormContents = {
     onsubmit: "createRecipe()",
     ingredients: [
-      {name: "tobe"},
+      {name: ""},
       {name: ""},
       {name: ""},
       {name: ""},
