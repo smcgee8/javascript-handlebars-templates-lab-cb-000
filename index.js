@@ -8,7 +8,7 @@ function init() {
 
 function loadRecipeForm() {
   var newFormContents = {
-    onsubmit: "createRecipe()"
+    onsubmit: "createRecipe()",
     ingredients: [
       {name: "tobe"},
       {name: ""},
