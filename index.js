@@ -18,11 +18,22 @@ function loadRecipeForm() {
     ]
   };
   var recipeFormTemplate = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
-  document.getElementsByTagName("main")[0].innerHTML += recipeFormTemplate(newFormContents)
+  document.getElementsByTagName("main")[0].innerHTML = recipeFormTemplate(newFormContents)
 }
 
 function createRecipe() {
-  var name = document.getElementByName("name")
+  var name = document.getElementByName("name");
+  var description = document.getElementByName("description");
+  var ingredients = document.getElementByName("ingredients");
+
+  var recipeContents = {
+    name: name,
+    description: description,
+    ingredients: []
+  };
+
+  var displayRecipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
+  document.getElementsByTagName("main")[0].innerHTML = displayRecipeTemplate(recipeContents)
 }
 
 function displayEditForm() {
