@@ -22,9 +22,9 @@ function loadRecipeForm() {
 }
 
 function createRecipe() {
-  var name = document.getElementByName("name");
-  var description = document.getElementByName("description");
-  var ingredients = document.getElementByName("ingredients");
+  var name = document.getElementsByName("name")[0];
+  var description = document.getElementsByName("description")[0];
+  var ingredients = document.getElementsByName("ingredients");
 
   var recipeContents = {
     name: name,
