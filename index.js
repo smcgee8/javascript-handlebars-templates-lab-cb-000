@@ -1,6 +1,6 @@
 function init() {
   //put any page initialization/handlebars initialization here
-
+  Handlerbars.registerPartial('recipeDetailsPartial', document.getElementById("recipe-details-template").innerHTML);
   loadRecipeForm();
 
 
