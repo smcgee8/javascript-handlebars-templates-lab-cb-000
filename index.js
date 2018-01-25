@@ -7,7 +7,8 @@ function init() {
 }
 
 function loadRecipeForm() {
-  var blank_ingredients = {
+  var newFormContents = {
+    onsubmit: "createRecipe()"
     ingredients: [
       {name: "tobe"},
       {name: ""},
@@ -17,7 +18,7 @@ function loadRecipeForm() {
     ]
   };
   var recipeFormTemplate = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
-  document.getElementsByTagName("main")[0].innerHTML += recipeFormTemplate(blank_ingredients)
+  document.getElementsByTagName("main")[0].innerHTML += recipeFormTemplate(newFormContents)
 }
 
 function createRecipe() {
