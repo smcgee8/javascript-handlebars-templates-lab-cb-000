@@ -45,8 +45,8 @@ function createRecipe() {
 }
 
 function displayEditForm() {
-  var name = document.getElementById("name").value;
-  var description = document.getElementById("description").value;
+  var name = document.getElementById("name").innerHTML;
+  var description = document.getElementById("description").innerHTML;
 
   var editFormContents = {
     onsubmit: "updateRecipe()",
