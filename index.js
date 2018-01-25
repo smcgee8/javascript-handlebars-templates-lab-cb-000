@@ -64,6 +64,8 @@ function displayEditForm() {
   document.getElementsByTagName("main")[0].innerHTML = recipeFormTemplate(editFormContents)
 }
 
+function updateRecipe() {createRecipe();}
+
 document.addEventListener("DOMContentLoaded", function(event) {
   init()
 })
