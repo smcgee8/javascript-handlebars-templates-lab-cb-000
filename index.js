@@ -47,18 +47,13 @@ function createRecipe() {
 function displayEditForm() {
   var name = document.getElementById("name").innerHTML;
   var description = document.getElementById("description").innerHTML;
+  var ingredients = document.getElementsById("ingredients");
 
   var editFormContents = {
     onsubmit: "updateRecipe()",
     name: name,
     description: description,
-    ingredients: [
-      {name: ""},
-      {name: ""},
-      {name: ""},
-      {name: ""},
-      {name: ""}
-    ]
+    ingredients: []
   };
 
   var recipeFormTemplate = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
