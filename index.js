@@ -56,6 +56,10 @@ function displayEditForm() {
     ingredients: []
   };
 
+  for (let i = 0; i < ingredients.length; i++) {
+    editFormContents.ingredients.push(ingredients[i].innerHTML);
+  }
+
   var recipeFormTemplate = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
   document.getElementsByTagName("main")[0].innerHTML = recipeFormTemplate(editFormContents)
 }
