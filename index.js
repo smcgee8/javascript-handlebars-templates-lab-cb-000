@@ -32,6 +32,8 @@ function createRecipe() {
     description: description,
     ingredients: []
   };
+
+  for (let i = 0; i < ingredients.length; i++)
   console.log(ingredients[0].value);
 
   var displayRecipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
