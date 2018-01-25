@@ -22,6 +22,7 @@ function loadRecipeForm() {
 }
 
 function createRecipe() {
+  event.preventDefault();
   var name = document.getElementByName("name");
   var description = document.getElementByName("description");
   var ingredients = document.getElementByName("ingredients");
@@ -33,7 +34,7 @@ function createRecipe() {
   };
 
   var displayRecipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
-  document.getElementsByTagName("main")[0].innerHTML = displayRecipeTemplate(recipeContents)
+  document.getElementsByTagName("main")[0].innerHTML = displayRecipeTemplate(recipeContents);
 }
 
 function displayEditForm() {
