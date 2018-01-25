@@ -9,7 +9,7 @@ function init() {
 function loadRecipeForm() {
   var blank_ingredients = {
     ingredients: [
-      {name: ""},
+      {name: "tobe"},
       {name: ""},
       {name: ""},
       {name: ""},
